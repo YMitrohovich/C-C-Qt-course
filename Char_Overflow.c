@@ -7,8 +7,8 @@ int main ()
 	printf ("'a' before incr. = %d\n",a); // Displays text and current value of variable "a"
 	printf ("Symbol: %c\n\n", a); // Displays a symbol according to a current value
  
-	a++; // Increments current value of variable "a" by 1, causing an overload
-	printf ("'a' after incr. = %d\n",a); // Displays -128 because variable "a" was overloaded
+	a++; // Increments current value of variable "a" by 1, causing an overflow
+	printf ("'a' after incr. = %d\n",a); // Displays -128 because variable "a" was overflowed
    	printf ("Symbol: %c\n", a);
 
 	return 0;
