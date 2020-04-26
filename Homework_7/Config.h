@@ -28,11 +28,10 @@
 void pb_add ();		// Protototypes of Phonebook I put to 'Config.h'
 void pb_list ();
 void pb_search ();
+int pb_check ();
 
 struct Phonebook {	// Also I store here the information about structure
-	char fname [20];
-	char lname [20];
-	char number [20];
+	char fname [50];
+	char lname [50];
+	char number [50];
 };
-
-
