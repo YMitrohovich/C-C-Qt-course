@@ -67,6 +67,7 @@ void stack (Task * head, int tasks_num) {	// 'Stack' function.
 
 	for (int i = 0; i < tasks_num; i++) {	// Push tasks in stack according to generated number of total tasks.
 		head = s_push (head);
+		peek (head);
 	}
 
 	char c;
