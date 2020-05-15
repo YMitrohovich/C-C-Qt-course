@@ -71,7 +71,7 @@ void stack (Task * head, int tasks_num) {	// 'Stack' function.
 	}
 
 	char c;
-	printf ("You have %d tasks.\nPress any key to start\n>", get_size (head));
+	printf ("\nYou have %d tasks.\nPress any key to start\n>", get_size (head));
 	scanf ("%s", &c);
 
 	run (head, tasks_num);		// Starts 'executing' of tasks.
@@ -131,11 +131,16 @@ void queue (Task * head, int tasks_num) {	// 'Queue' function.
 	head->size = 1;
 	head->next = NULL;
 	params (head, head->size);
+	peek (head);
 
 	Task * head_2 = create_new(head);	// Because I couldn't implement it other way, we have to create several 'task' members manually and link each of them together.
+	peek (head_2);
 	Task * head_3 = create_new(head_2);
+	peek (head_3);
 	Task * head_4 = create_new(head_3);
+	peek (head_4);
 	Task * head_5 = create_new(head_4);
+	peek (head_5);
 
 	q_push (head, head_2);		// 'Push' has arguments of previous task (first argument) and the new task (second argument) to link them together.
 	q_push (head_2, head_3);
@@ -145,7 +150,7 @@ void queue (Task * head, int tasks_num) {	// 'Queue' function.
 	tasks_num = head_5->size;	// So the total number of tasks equals the size of the last pushed task.
 
 	char c;
-	printf ("You have %d tasks.\nPress any key to start\n>", get_size (head_5));
+	printf ("\nYou have %d tasks.\nPress any key to start\n>", get_size (head_5));
 	scanf ("%s", &c);
 
 	run (head, tasks_num);
